@@ -47,14 +47,14 @@ main {
     padding: 10px 3px;
 }
 
-.flex {
+.list {
     display: inline-block;
     justify-content: space-evenly;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 30px;
 }
-.flex img {
+.list img {
     border: 3px solid darkgrey;
     border-radius: 5px;
     height: 200px;
@@ -71,7 +71,7 @@ main {
     margin: 15px 2px;
 }
 .project:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
 }
 .project a {
     text-decoration: none;
@@ -92,10 +92,28 @@ p {
     font-size: 20px;
 }
 h3 {
-    font-size: 24px;
+    font-size: 30px;
 }
 h2 {
-    font-size: 28px;
+    font-size: 36px;
+}
+h1 {
+    font-size: 40px;
+}
+.fa {
+    font-size: 16px;
+}
+
+.description p {
+    text-align: justify;
+    margin-top: 10px;
+    text-indent: 20px;
+    font-size: 17px;
+    max-width: 200px;
+}
+
+h1, h2, h3 {
+    font-family: Oswald;
 }
 
 @media (min-width: 340px) {
@@ -107,8 +125,11 @@ h2 {
         max-width: 100%;
         margin: 50px auto;
     }
-    .flex {
+    .list {
         padding: 15px;
+    }
+    .description p {
+        max-width: 250px;
     }
 }
 
@@ -145,7 +166,7 @@ h2 {
         padding: 50px;
     }
 
-    .flex {
+    .list {
         padding: 10px 50px;
     }
 
@@ -161,12 +182,31 @@ h2 {
         padding: 5px;
     }
 
+    .created, .updated {
+        max-width: 250px;
+    }
+
 }
 
 @media (min-width: 965px) {
-    .flex {
+    .project a {
         display: flex;
+        flex-direction: row-reverse;
+        gap: 15px;
+        align-items: center;
     }
+    .description p {
+        max-width: 500px;
+    }
+
+    .text h3 {
+        text-align: left;
+    }
+
+    .created, .updated {
+        margin: 5px 0 5px 20px;
+    }
+    
     .project {
         margin: 20px auto;
     }
